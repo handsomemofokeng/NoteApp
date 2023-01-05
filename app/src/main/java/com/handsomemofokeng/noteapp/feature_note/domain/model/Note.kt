@@ -11,7 +11,7 @@ import com.handsomemofokeng.noteapp.ui.theme.LightGreen
 @Entity
 data class Note (
     val title: String,
-    val description: String,
+    val content: String,
     val timeStamp: Long,
     val color: Int,
     @PrimaryKey val id: Int? = null
@@ -20,3 +20,5 @@ data class Note (
         val noteColors = listOf(RedOrange, RedPink, BabyBlue, Violet, LightGreen)
     }
 }
+
+class InvalidNoteException(message: String) : Exception(message)
